@@ -1,0 +1,18 @@
+﻿<div class="book-card">
+    <div class="book-card-body">
+        <h5>@Book.Title</h5>
+        By @Book.Author |@Book.PublicationDate?.ToString("dd/MM/yyyy") | @Book.Category
+    </div>
+    <div class="actions">
+         <a href="@($"/edit/{Book.Id}")"
+            class="btn btn-warning shadow-none">
+            Edit
+         </a>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public required Book Book { get; set; }
+
+}
